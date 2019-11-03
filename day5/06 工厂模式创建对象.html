@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06</title>
+    <script>
+        /*
+         *
+         * 如何获取该变量(对象)是不是属于什么类型的?
+         * 语法:
+         * 变量 instanceof 类型的名字----->布尔类型,true就是这种类型,false不是这种类型
+         * 在当前的对象的方法中,可以使用this关键字代表当前的对象
+         *
+         *
+         * */
+
+
+        var dog = new Object();
+        dog.name = "小白";
+        dog.age = 3;
+        dog.color = "white";
+        dog.eat = function () {
+            console.log("汪汪汪,我叫" + this.name); // 
+            console.log("我今年" + this.age + "岁了");
+        }
+        dog.eat(); //方法的调用
+
+
+        function createObject(name, age) {
+            var obj = new Object;
+            obj.name = name;
+            obj.age = age;
+            obj.sayHi = function () {
+                console.log("hello!");
+            };
+            return obj;
+        }
+
+        var smallDog = createObject("汪汪队", 6);
+        smallDog.sayHi();
+        console.log(smallDog.name);
+
+
+        var bigDog = createObject("puppy", 7);
+        bigDog.sayHi();
+        console.log(bigDog.name);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

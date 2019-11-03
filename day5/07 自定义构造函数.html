@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07</title>
+    <script>
+        //自定义构造函数创建对象,自己定义一个构造函数，创建对象
+        //函数和构造函数的区别：名字是不是大写（首字母大写）
+        function Person() {
+            this.name = "llf";
+            this.age = 23;
+            this.sayHi = function () {
+                console.log("My name is " + this.name + ", and my age is " + this.age);
+            }
+        }
+        //自定义构造函数创建对象，先自定义一个构造函数，创建对象 
+        var obj = new Person();
+        console.log(obj.name);
+        console.log(obj.age);
+        obj.sayHi();
+
+
+        // --------------------------------------
+        //更改 广泛使用
+        function Person1(name, age) {
+            this.name = name;
+            this.age = age;
+            this.sayHi = function () {
+                console.log("My name is " + this.name + ", and my age is " + this.age);
+            }
+        }
+        var obj2 = new Person1("mmj", 22);
+        console.log(obj2.name);
+        console.log(obj2.age);
+        obj2.sayHi();
+
+        //验证                                                       
+        console.log(obj instanceof Person);
+        console.log(obj2 instanceof Person1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

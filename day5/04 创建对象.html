@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04 </title>
+    <script>
+        /*
+        
+        1.调用系统的构造函数创建对象
+
+        2.自定义构造函数创建对象（结合第一种和需求通过工厂模式创建对象）
+
+        3.字面量的方式创建对象
+        
+        */
+
+
+        //实例化对象
+        var obj = new Object();
+        //对象有特征 ----属性和行为 ---方法
+
+        //添加属性 ---- 如何添加属性？ 对象.名字=值;
+        obj.name = "llf";
+        obj.age = 23;
+        obj.sex = "男";
+
+        //添加方法----如何添加方法？ 对象.名字=函数;
+        obj.eat = function () {
+            console.log("66666666666");
+        }
+        obj.play = function () {
+            console.log("我喜欢ow");
+        }
+
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj.sex);
+        obj.eat();
+        obj.play();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
