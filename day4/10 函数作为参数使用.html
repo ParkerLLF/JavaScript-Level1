@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10</title>
+    <script>
+
+        function f1(x ,y) {
+            console.log(x+y);
+        }
+        f1(10,20); //输出 30
+
+        function f2(x,y) {
+        console.log(x+y);
+        }
+        f2("一","二"); //输出 "一二"
+
+        function f3(x) {
+            console.log(x);
+        }
+        f3(true); 
+
+
+        //函数声明 ，fn是变量，fn是参数---------------------------
+        function f4(fn) {
+            fn();
+        }
+        function f5() {
+            console.log("f5 代码块");
+        }
+        f4(f5); //调用时将f5代码给fn，在f4中的代码中，fn调用时执行f5中的代码
+
+        //函数可以作为参数使用，如果一个函数作为参数，那么我们说这个参数（函数）可以叫做回调函数
+        function sayHi(fn) {
+            console.log("你好");
+            fn();
+        }
+        function meSay() {
+            console.log("林良富，你好啊");
+        }
+        sayHi(meSay);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
