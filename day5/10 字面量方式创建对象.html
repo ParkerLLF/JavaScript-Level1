@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10 </title>
+    <script>
+        //字面量方式创建对象
+        var obj = {};  //空对象
+        obj.name = "小白";
+        obj.age = 10;
+        //添加方法
+        obj.sayHi = function () {
+            console.log("我是:" + this.name);
+        };
+
+
+        //优化后
+        obj.sayHi();
+        var obj2 = {
+            name: "小明",
+            age: 20,
+            sayHi: function () {
+                console.log("我是:" + this.name);
+            },
+            eat: function () {
+                console.log("吃了");
+            }
+        };
+        obj2.sayHi();
+        obj2.eat();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13 json</title>
+    <script>
+        //对象：有属性和方法，特指的某个事物
+        //对象：一组无序属性的集合
+        // function Dog(name) {
+        //     this.name = name;
+        // }
+
+        // function Person(name, age) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sex = true;
+        //     this.dog = new Dog();
+        //     this.play = function () {
+        //         console.log("喜欢玩球");
+        //     };
+        // }
+
+        // var sex = true;
+        // console.log(sex ? "男" : "女");
+
+
+
+        //JSON格式的数据：一般都是成对的，是  "键值对"
+        var obj = {
+            name: "LLF",
+            age: 10,
+        };
+
+        var json = {
+            "name": "小明",
+            "age": "18",
+            "sex": "男",
+        };
+        //遍历对象，是不能通过for循环遍历
+        // var key = "name";
+        // console.log(json[key]);
+
+        
+        //！-----可以通过for-in循环------！
+
+        // 错误写法：
+        for (var key in json) {
+            console.log(key); //json对象中的属性的名字
+            console.log(json.key); //错误！！！
+        }
+
+        //正确写法：
+        for (var key in json) {
+            console.log(key); //json对象中的属性的名字-----键
+            console.log(json[key]); //正确！！！----------值
+        }
+
+        //对象中确实有这个属性对象.属性名字  或者对象[属性名字]
+
+        //key是一个变量,这个变量中存储的是该对象的所有的属性的名字
+        for (var key in json) {
+            console.log(key + "===========" + json[key]);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

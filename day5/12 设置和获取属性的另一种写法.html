@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>12 </title>
+    <script>
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.play = function () {
+                console.log("喜欢追球！")
+            }
+        }
+        var obj = new Person("小黄", 3);
+        // obj.name = "小白"; //改变对象里的值
+        //也可以这样子写
+        obj["name"] = "小白1";
+        //也可以这样子输出
+        console.log(obj["name"]);
+
+        console.log(obj.name);
+        console.log(obj.age);
+
+        obj.play();
+        obj["play"]();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
