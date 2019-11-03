@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>13 循环语句之do-while循环</title>
+    <script>
+        // var i = 0;
+        // do{
+        //     console.log("bingo");
+        //     i++;
+        // }while(i<10);
+
+    //while循环
+        var sum = 0 ;
+        var i=1 ;
+        while(i<=100){
+            if(i%3== 0 ){
+                sum += i;
+            }
+            i++;        
+        }
+        console.log(sum);//1683
+
+
+    //do-while循环
+        var sum = 0;
+        var i =1 ;
+        do{
+            if (i%3== 0) {
+                sum += i;
+            }
+            i++;
+        }while(i<=100); 
+        console.log(sum);//1683
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
