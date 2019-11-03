@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10</title>
+    <script>
+        var str = "123456789abcdefghijklmn";
+        // console.log("67");
+        var key = "67";
+        var index = str.indexOf(key); //找到67所在的索引
+        str = str.substr(index, 5); //通过找到的索引开始截取5个字符
+        console.log(str);
+
+        //2  .indexOf(要找的字符串,从某个位置开始的索引);返回的是这个字符串的索引值,没找到则返回-1
+        var str2 = "hello omg ohio orange hero";
+        var index = 0;
+        var key = "o";
+        //从0开始找 "o",找到"o"之后就输出"o"所在的索引值,然后索引累加
+        while ((index = str2.indexOf(key, index)) != -1) {
+            console.log(index);
+            index += key.length;
+        }
+
+        //案例3:找到这个字符串中每个字符串出现了多少次
+        var str3 = "whatOareYyouYnoYshaHleiHoHmyHgod";
+        //第一步:把所有的字母全部变成小写
+        str3 = str3.toLocaleLowerCase();
+        //第二步:创建一个空对象,目的:把字母作为键,次数作为值
+        var obj = {};
+        //第三步,遍历字符串,获取每个字母
+        for (var i = 0; i < str3.length; i++) {
+            var key = str3[i]; //每个字母
+            if (obj[key]) { //判断obj中有没有这个键  
+                obj[key]++;
+            } else {
+                obj[key] = 1;
+            }
+        }
+        //遍历对象，显示每个字母的位置
+        for (var key in obj) {
+            console.log(key + "这个字母出现了" +obj[key]+"次");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        //推导过程
+        //创建新的对象---空对象---没有属性,也没有方法
+        //    var obj={
+        //      "sex":"男"
+        //    };
+        //我想知道这个obj对象中有没有sex这个属性
+        //把对象["属性名字"]--->放在if的判断中即可----判断对象中有没有这个属性
+        //if的判断的结果是true,则有这个属性,否则没有这个属性
+        //    if(obj["age"]){
+        //      console.log("有");
+        //    }else{
+        //      console.log("没有");
+        //    }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

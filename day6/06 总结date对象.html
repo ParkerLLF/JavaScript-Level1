@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var now = new Date();
+        now; // Wed Jun 24 2015 19:49:22 GMT+0800 (CST)
+        now.getFullYear(); // 2015, 年份
+        now.getMonth(); // 5, 月份，注意月份范围是0~11，5表示六月
+        now.getDate(); // 24, 表示24号
+        now.getDay(); // 3, 表示星期三
+        now.getHours(); // 19, 24小时制
+        now.getMinutes(); // 49, 分钟
+        now.getSeconds(); // 22, 秒
+        now.getMilliseconds(); // 875, 毫秒数
+        now.getTime(); // 1435146562875, 以number形式表示的时间戳
+
+        var dt = new Date();
+        var dt = +new Date(); //一种特殊的写法,只适用于这个Date的对象
+        console.log(dt);
+
+        dt.getFullYear(); //年
+        dt.getMonth(); //月---从0开始
+        dt.getDate(); //日
+        dt.getHours(); //小时
+        dt.getMinutes(); //分钟
+        dt.getSeconds(); //秒
+        dt.getDay(); //星期---从0开始
+        dt.toDateString(); //日期
+        dt.toLocaleDateString(); //日期
+        dt.toTimeString(); //时间
+        dt.toLocaleTimeString(); //时间
+        dt.valueOf(); //毫秒
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

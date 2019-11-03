@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07 格式化日期和时间</title>
+    <script>
+        function getDate(dt) {
+            var dt = new Date();
+            //获取年
+            var year = dt.getFullYear();
+            //获取月
+            var month = dt.getMonth() + 1;
+            //获取日
+            var date = dt.getDate();
+            //获取小时
+            var hour = dt.getHours();
+            //获取分钟
+            var min = dt.getMinutes();
+            //获取秒
+            var sec = dt.getSeconds();
+            //获取星期几
+            var day = dt.getDay();
+
+            month = month < 10 ? "0" + month : month;
+            date = date < 10 ? "0" + date : date;
+            sec = sec < 10 ? "0" + sec : sec;
+            min = min < 10 ? "0" + min : min;
+
+            return year + "年 " + month + "月 " + date + "日 " + hour + "时 " + min + "分 " + sec + "秒 " + "星期" + day;
+        }
+
+        var dt = new Date();
+        console.log(getDate(dt));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
