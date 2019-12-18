@@ -2,121 +2,121 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>09 </title>
-    <script>
-        /*
-         *
-         * 实例方法---->必须要通过new的方式创建的对象(实例对象)来调用的方法
-         * 静态方法---->直接通过大写的构造函数的名字调用的方法(直接通过大写的对象名字调用的)
-         *
-         * */
-        /*
-         *
-         * 字符串的常用属性:
-         * .length------>字符串的长度
-         * .charAt(索引),返回值是指定索引位置的字符串,超出索引,结果是空字符串
-         * .fromCharCode(数字值,可以是多个参数),返回的是ASCII码对应的值
-         * .concat(字符串1,字符串2,...);返回的是拼接之后的新的字符串
-         * .indexOf(要找的字符串,从某个位置开始的索引);返回的是这个字符串的索引值,没找到则返回-1
-         * .lastIndexOf(要找的字符串);从后向前找,但是索引仍然是从左向右的方式,找不到则返回-1
-         * .replace("原来的字符串","新的字符串");用来替换字符串的
-         * .slice(开始的索引,结束的索引); 从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
-         * .split("要干掉的字符串",切割后留下的个数);切割字符串
-         * .substr(开始的位置,个数);返回的是截取后的新的字符串
-         * .substring(开始的索引,结束的索引),返回截取后的字符串,不包含结束的索引的字符串
-         * .toLocaleLowerCase();转小写
-         * .toLowerCase();转小写
-         * .toLocaleUpperCase()转大写
-         * .toUpperCase();转大写
-         * .trim();干掉字符串两端的空格
-         *
-         *
-         * */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>09 </title>
+  <script>
+    /*
+     *
+     * 实例方法---->必须要通过new的方式创建的对象(实例对象)来调用的方法
+     * 静态方法---->直接通过大写的构造函数的名字调用的方法(直接通过大写的对象名字调用的)
+     *
+     * */
+    /*
+     *
+     * 字符串的常用属性:
+     * .length------>字符串的长度
+     * .charAt(索引),返回值是指定索引位置的字符串,超出索引,结果是空字符串
+     * .fromCharCode(数字值,可以是多个参数),返回的是ASCII码对应的值
+     * .concat(字符串1,字符串2,...);返回的是拼接之后的新的字符串
+     * .indexOf(要找的字符串,从某个位置开始的索引);返回的是这个字符串的索引值,没找到则返回-1
+     * .lastIndexOf(要找的字符串);从后向前找,但是索引仍然是从左向右的方式,找不到则返回-1
+     * .replace("原来的字符串","新的字符串");用来替换字符串的
+     * .slice(开始的索引,结束的索引); 从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
+     * .split("要干掉的字符串",切割后留下的个数);切割字符串
+     * .substr(开始的位置,个数);返回的是截取后的新的字符串
+     * .substring(开始的索引,结束的索引),返回截取后的字符串,不包含结束的索引的字符串
+     * .toLocaleLowerCase();转小写
+     * .toLowerCase();转小写
+     * .toLocaleUpperCase()转大写
+     * .toUpperCase();转大写
+     * .trim();干掉字符串两端的空格
+     *
+     *
+     * */
 
-        var str = "12345";
-        console.log(str.length); //输出 5
-
-
-        // .charAt(索引),返回值是指定索引位置的字符串,超出索引,结果是空字符串
-        var str0 = "abcdefghijklmnopqrstuvwxyz";
-        var result = str0.charAt(14); // o
-        console.log(result);
+    var str = "12345";
+    console.log(str.length); //输出 5
 
 
-        //.fromCharCode(数字值,可以是多个参数),返回的是ASCII码对应的值
-        var str1 = String.fromCharCode(107, 108, 109);
-        console.log(str1); //klm
-        var str2 = String.fromCharCode(83, 79, 83);
-        console.log(str2); //SOS
+    // .charAt(索引),返回值是指定索引位置的字符串,超出索引,结果是空字符串
+    var str0 = "abcdefghijklmnopqrstuvwxyz";
+    var result = str0.charAt(14); // o
+    console.log(result);
 
-        // .concat(字符串1,字符串2,...);返回的是 拼接 之后的新的字符串
-        var str3 = "llf";
-        console.log(str3.concat("mmj", "tom", "jude", "jerry", "marry"));
 
-        // .indexOf(要找的字符串,从某个位置开始的索引);返回的是这个字符串的索引值,没找到则返回-1
-        var str4 = "abcdefghijk";
-        var index = str4.indexOf("c");
-        console.log(index);
+    //.fromCharCode(数字值,可以是多个参数),返回的是ASCII码对应的值
+    var str1 = String.fromCharCode(107, 108, 109);
+    console.log(str1); //klm
+    var str2 = String.fromCharCode(83, 79, 83);
+    console.log(str2); //SOS
 
-        // .lastIndexOf(要找的字符串);从后向前找,但是索引仍然是从左向右的方式,找不到则返回-1
-        var str5 = "helo amen";
-        var index = str5.lastIndexOf("Y");
-        console.log(index);
+    // .concat(字符串1,字符串2,...);返回的是 拼接 之后的新的字符串
+    var str3 = "llf";
+    console.log(str3.concat("mmj", "tom", "jude", "jerry", "marry"));
 
-        // .replace("原来的字符串","新的字符串");用来替换字符串的
-        var str6 = "llf is a boy!";
-        if (str6.indexOf("llf" != -1)) {
-            str6 = str6.replace("llf", "mmj");
-        } else {
-            console.log("不存在");
-        }
-        console.log(str5);
+    // .indexOf(要找的字符串,从某个位置开始的索引);返回的是这个字符串的索引值,没找到则返回-1
+    var str4 = "abcdefghijk";
+    var index = str4.indexOf("c");
+    console.log(index);
 
-        // .slice(开始的索引,结束的索引); 从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
-        var str7 = "如果有一天我邪恶了,请记住,我曾纯洁过";
-        //从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
-        str = str7.slice(5, 10);
-        console.log(str7);
+    // .lastIndexOf(要找的字符串);从后向前找,但是索引仍然是从左向右的方式,找不到则返回-1
+    var str5 = "helo amen";
+    var index = str5.lastIndexOf("Y");
+    console.log(index);
 
-        // .split("要干掉的字符串",切割后留下的个数);切割字符串
-        var str8 = "乔峰|慕容|凤姐|梅超风|小苏|大蛇丸";
-        var arr = str8.split("|", 3); //切割后留下的个数--3个
-        for (let i = 0; i < arr.length; i++) {
-            console.log(arr[i]);
-        }
+    // .replace("原来的字符串","新的字符串");用来替换字符串的
+    var str6 = "llf is a boy!";
+    if (str6.indexOf("llf" != -1)) {
+      str6 = str6.replace("llf", "mmj");
+    } else {
+      console.log("不存在");
+    }
+    console.log(str5);
 
-        // .substr(开始的位置,个数);返回的是截取后的新的字符串
-        var str9 = "0123456789abcdefghijkl";
-        str9 = str9.substr(7, 8); //从索引为7开始，截取后面8个
-        console.log(str9);
+    // .slice(开始的索引,结束的索引); 从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
+    var str7 = "如果有一天我邪恶了,请记住,我曾纯洁过";
+    //从索引5的位置开始提取,到索引为10的前一个结束,没有10，并返回这个提取后的字符串
+    str = str7.slice(5, 10);
+    console.log(str7);
 
-        // .substring(开始的索引,结束的索引),返回截取后的字符串,不包含结束的索引的字符串
-        var str10 = "0123456789abcdefghijkl";
-        str10 = str10.substring(4, 13); //索引为4到13之间的内容
-        console.log(str10);
+    // .split("要干掉的字符串",切割后留下的个数);切割字符串
+    var str8 = "乔峰|慕容|凤姐|梅超风|小苏|大蛇丸";
+    var arr = str8.split("|", 3); //切割后留下的个数--3个
+    for (let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
 
-        // .toLocaleLowerCase();转小写
-        // .toLowerCase();
-        var str11 = "HELLO";
-        str11 = str11.toLocaleLowerCase();
-        str11 = str11.toLowerCase();
-        console.log(str11);
+    // .substr(开始的位置,个数);返回的是截取后的新的字符串
+    var str9 = "0123456789abcdefghijkl";
+    str9 = str9.substr(7, 8); //从索引为7开始，截取后面8个
+    console.log(str9);
 
-        // .toLocaleUpperCase()转大写
-        // .toUpperCase();转大写
-        var str12 = "hello";
-        str12 = str12.toLocaleUpperCase();
-        str12 = str12.toUpperCase();
-        console.log(str12);
+    // .substring(开始的索引,结束的索引),返回截取后的字符串,不包含结束的索引的字符串
+    var str10 = "0123456789abcdefghijkl";
+    str10 = str10.substring(4, 13); //索引为4到13之间的内容
+    console.log(str10);
 
-        // .trim();干掉字符串两端的空格 
-        var str13 = "     123   456    789     ";
-        str13 = str13.trim();
-        console.log(str13);
-    </script>
+    // .toLocaleLowerCase();转小写
+    // .toLowerCase();
+    var str11 = "HELLO";
+    str11 = str11.toLocaleLowerCase();
+    str11 = str11.toLowerCase();
+    console.log(str11);
+
+    // .toLocaleUpperCase()转大写
+    // .toUpperCase();转大写
+    var str12 = "hello";
+    str12 = str12.toLocaleUpperCase();
+    str12 = str12.toUpperCase();
+    console.log(str12);
+
+    // .trim();干掉字符串两端的空格 
+    var str13 = "     123   456    789     ";
+    str13 = str13.trim();
+    console.log(str13);
+  </script>
 </head>
 
 <body>

@@ -2,47 +2,51 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>17</title>
-    <script>
-        //实例对象:通过构造函数创建出来,实例化的对象
-        //静态对象:不需要创建,直接就是一个对象,方法(静态方法)直接通过这个对象名字调用,
-        //实例方法必须通过实例对象调用
-        //静态方法必须通过大写的对象调用
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>17</title>
+  <script>
+    //实例对象:通过构造函数创建出来,实例化的对象
+    //静态对象:不需要创建,直接就是一个对象,方法(静态方法)直接通过这个对象名字调用,
+    //实例方法必须通过实例对象调用
+    //静态方法必须通过大写的对象调用
 
-        //Math.PI----π---
-        //Math.E----常数的底数
-        //Math.abs(值)-----绝对值
-        //Math.ceil(值)----向上取整
-        //Math.floor(值)---向下取整
+    //Math.PI----π---
+    //Math.E----常数的底数
+    //Math.abs(值)-----绝对值
+    //Math.ceil(值)----向上取整
+    //Math.floor(值)---向下取整
 
-        document.write(Math.PI + "</br>");
-        document.write(Math.E + "</br>");
-        document.write(Math.abs(-100) + "</br>");
-        document.write(Math.abs(null) + "</br>"); //0
-        document.write(Math.abs("string") + "</br>"); //NaN
+    document.write(Math.PI + "</br>");
+    document.write(Math.E + "</br>");
+    document.write(Math.abs(-100) + "</br>");
+    document.write(Math.abs(null) + "</br>"); //0
+    document.write(Math.abs("string") + "</br>"); //NaN
 
-        //向上舍入
-        document.write(Math.ceil(12.3) + "</br>"); //13
-        document.write(Math.ceil(12.9) + "</br>"); //13
-        document.write(Math.ceil(12.09) + "</br>"); //13
-        document.write(Math.ceil(12.03) + "</br>"); //13
-        document.write(Math.ceil(12.92) + "</br>"); //13
+    //向上舍入
+    document.write(Math.ceil(12.3) + "</br>"); //13
+    document.write(Math.ceil(12.9) + "</br>"); //13
+    document.write(Math.ceil(12.09) + "</br>"); //13
+    document.write(Math.ceil(12.03) + "</br>"); //13
+    document.write(Math.ceil(12.92) + "</br>"); //13
 
-        //向下舍入
-        document.write(Math.floor(12.3) + "</br>"); //12
-        document.write(Math.floor(12.9) + "</br>"); //12
-        document.write(Math.floor(12.09) + "</br>"); //12
-        document.write(Math.floor(12.03) + "</br>"); //12
-        document.write(Math.floor(12.92) + "</br>"); //12
-        
-        // 可以将任意的数字转换为离它最近的单精度浮点数形式的数字。
-        document.write(Math.fround(2) + "</br>");
-        document.write(Math.fround(2.1) + "</br>");
-        document.write(Math.fround(2.9) + "</br>");
-    </script>
+    //向下舍入
+    document.write(Math.floor(12.3) + "</br>"); //12
+    document.write(Math.floor(12.9) + "</br>"); //12
+    document.write(Math.floor(12.09) + "</br>"); //12
+    document.write(Math.floor(12.03) + "</br>"); //12
+    document.write(Math.floor(12.92) + "</br>"); //12
+
+    // 可以将任意的数字转换为离它最近的单精度浮点数形式的数字。
+    document.write(Math.fround(2) + "</br>");
+    document.write(Math.fround(2.1) + "</br>");
+    document.write(Math.fround(2.9) + "</br>");
+
+    //四舍五入
+    document.write(Math.round(3.4) + "</br>")
+    document.write(Math.round(3.5))
+  </script>
 </head>
 
 <body>

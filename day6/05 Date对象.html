@@ -2,54 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>05 Date 对象</title>
-    <script>
-        var dt = new Date();
-        console.log(dt);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>05 Date 对象</title>
+  <script>
+    var dt = new Date();
+    console.log(dt);
 
-        var dt1 = new Date("2019-10-31");
-        console.log(dt1);
+    var dt1 = new Date("2019-10-31");
+    console.log(dt1);
 
-        var dt2 = new Date("2019/10/29");
-        console.log(dt2);
-
-
-        var dt3 = Date.now();
-        console.log(dt3); //输出得到的毫秒数  1秒=1000毫秒
-        console.log(dt3 / 1000); //秒
-        console.log(dt3 / (1000 * 60)); //分
-        console.log(dt3 / (1000 * 60 * 60)); //时
-        console.log(dt3 / (1000 * 60 * 60 * 24)); //天
-        console.log(dt3 / (1000 * 60 * 60 * 24 * 365)); //年
+    var dt2 = new Date("2019/10/29");
+    console.log(dt2);
 
 
-        var dt4 = new Date();
-        //获取年份
-        console.log(dt4.getFullYear()); //年
-        //获取月份
-        console.log(dt4.getMonth() + 1); //从0开始的 0-11月
-        console.log(dt4.getDate());
-        console.log(dt4.getHours());
-        console.log(dt4.getMinutes());
-        console.log(dt4.getSeconds());
-        console.log(dt4.getDay()); //星期从0开始 0是星期天
-        console.log(dt4.getFullYear() + "年 " + (dt4.getMonth() + 1) + "月 " + dt4.getDate() + "日 " + dt4.getHours() +
-            "时 " + dt4.getMinutes() + "分 " + dt4.getSeconds() + "秒 " + "星期" + dt4.getDay());
+    var dt3 = Date.now();
+    console.log(dt3); //输出得到的毫秒数  1秒=1000毫秒
+    console.log(dt3 / 1000); //秒
+    console.log(dt3 / (1000 * 60)); //分
+    console.log(dt3 / (1000 * 60 * 60)); //时
+    console.log(dt3 / (1000 * 60 * 60 * 24)); //天
+    console.log(dt3 / (1000 * 60 * 60 * 24 * 365)); //年
 
 
-        var dt5 = new Date();
-        console.log(dt5);
-        //转换成字符串
-        console.log(dt5.toString()); //格式：Mon Oct 28 2019 17:38:15 GMT+0800 (中国标准时间)
-        console.log(dt5.toDateString()); //格式：Mon Oct 28 2019
-        console.log(dt5.toLocaleDateString()); //格式：2019/10/28
-        console.log(dt5.toTimeString()); //17:41:16 GMT+0800 (中国标准时间)
-        console.log(dt5.toLocaleTimeString()); //下午5:41:16
-        console.log(dt5.valueOf()); //毫秒数
-    </script>
+    var dt4 = new Date();
+    //获取年份
+    console.log(dt4.getFullYear()); //年
+    //获取月份
+    console.log(dt4.getMonth() + 1); //从0开始的 0-11月
+    console.log(dt4.getDate());
+    console.log(dt4.getHours());
+    console.log(dt4.getMinutes());
+    console.log(dt4.getSeconds());
+    console.log(dt4.getDay()); //星期从0开始 0是星期天
+    console.log(dt4.getFullYear() + "年 " + (dt4.getMonth() + 1) + "月 " + dt4.getDate() + "日 " + dt4.getHours() +
+      "时 " + dt4.getMinutes() + "分 " + dt4.getSeconds() + "秒 " + "星期" + dt4.getDay());
+
+
+    var dt5 = new Date();
+    console.log(dt5);
+    //转换成字符串
+    console.log(dt5.toString()); //格式：Mon Oct 28 2019 17:38:15 GMT+0800 (中国标准时间)
+    console.log(dt5.toDateString()); //格式：Mon Oct 28 2019
+    console.log(dt5.toLocaleDateString()); //格式：2019/10/28
+    console.log(dt5.toTimeString()); //17:41:16 GMT+0800 (中国标准时间)
+    console.log(dt5.toLocaleTimeString()); //下午5:41:16
+    console.log(dt5.valueOf()); //毫秒数
+  </script>
 </head>
 
 <body>
